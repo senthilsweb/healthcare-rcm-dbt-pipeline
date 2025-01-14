@@ -1,0 +1,18 @@
+version: '3.8'
+
+services:
+  postgres:
+    image: postgres:15 # Use the desired PostgreSQL version
+    container_name: postgres_container
+    restart: always
+    environment:
+      POSTGRES_USER: admin_user       
+      POSTGRES_PASSWORD: admin_pwd 
+      POSTGRES_DB: postgres     
+    ports:
+      - "5430:5432"               
+    volumes:
+      - dbt_pg_data:/var/lib/postgresql/data 
+
+volumes:
+  dbt_pg_data:

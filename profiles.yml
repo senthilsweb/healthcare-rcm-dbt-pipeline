@@ -1,0 +1,40 @@
+healthcare_analytics:
+  target: dev_pg
+  outputs:
+    dev_duckdb:
+      type: duckdb
+      path: 'md:rcm_db?motherduck_token=<your-motherduck-token>'
+      schema: raw
+      threads: 24
+    dev_pg:
+      type: postgres
+      threads: 10
+      host: localhost
+      port: 5430
+      user: admin_user
+      pass: admin_pwd
+      dbname: postgres
+      schema: raw
+
+    prod:
+      type: postgres
+      threads: 10
+      host: 
+      port: 5432
+      user: 
+      pass: 
+      dbname: 
+      schema: raw
+  
+elementary:
+  target: default
+  outputs:
+    default:
+      type: "postgres"
+      host: "localhost"
+      port: 5430
+      user: admin_user
+      pass: admin_pwd
+      dbname: "postgres"
+      schema: "elementary"
+      threads: 10
