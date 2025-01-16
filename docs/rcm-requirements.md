@@ -2,7 +2,7 @@
 
 ## Background
 
-Healthcare Revenue Cycle Management (RCM) is one of the most data-intensive processes in healthcare organizations. Following the research by George & Jeyakumar (2020), we understand that healthcare data management demands unique approaches due to its complexity in handling both clinical and financial data streams. This article details our implementation of a modern data pipeline using dbt (data build tool) to create a robust analytics solution.
+
 
 ## Use Case Scenario
 
