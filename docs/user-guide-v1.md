@@ -157,25 +157,3 @@ dbt run --select mart.clinical
 dbt docs generate
 dbt docs serve
 ```
-
-## Data Quality and Testing Framework
-Implemented across layers:
-- Schema tests (null checks, uniqueness)
-- Referential integrity
-- Business logic validation
-- Metric consistency
-
-## Benefits and Outcomes
-1. Modular and maintainable codebase
-2. Automated data transformations
-3. Clear business entity separation
-4. Comprehensive analytics ready models
-5. Built-in documentation and testing
-
-## Future Enhancements
-1. Advanced data quality checks
-2. Real-time data processing
-3. Machine learning feature preparation
-4. Advanced analytics views
-5. Dashboard integration
-
