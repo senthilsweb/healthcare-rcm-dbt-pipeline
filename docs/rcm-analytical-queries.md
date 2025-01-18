@@ -8,8 +8,8 @@ with patient_metrics as (
         count(fe.encounter_id) as total_encounters,
         sum(fe.emergency_visit_flag) as emergency_visits,
         avg(fe.duration_minutes) as avg_visit_duration
-    from "pdc_demo_apps"."mart"."dim_patient" dp
-    left join "pdc_demo_apps"."mart"."fct_encounters" fe 
+    from "mart"."dim_patient" dp
+    left join "mart"."fct_encounters" fe 
         on dp.patient_id = fe.patient_key
     group by 1, 2
 )
@@ -20,7 +20,7 @@ order by emergency_visits desc;
 ```
 
 ### Claims analysis by payer
-```
+```sql
 select 
     dp.payer_name,
     count(fc.claim_id) as total_claims,
